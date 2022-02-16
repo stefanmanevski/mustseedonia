@@ -11336,6 +11336,7 @@ video.bg-video {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 85%;
 }
 .masthead:before {
   content: "";
@@ -11348,11 +11349,16 @@ video.bg-video {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.45);
 }
+.logo-container > img {
+  width: 100%;
+  max-width: 300px;
+  padding-bottom: 3rem;
+}
 .masthead .masthead-content {
   position: relative;
   max-width: 40rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  /* padding-top: 5rem; */
+  /* padding-bottom: 5rem; */
 }
 .masthead .masthead-content h1, .masthead .masthead-content .h1 {
   font-size: 2.5rem;
@@ -11428,4 +11434,28 @@ video.bg-video {
     right: 2.5rem;
     width: auto;
   }
+}
+
+@media (max-width: 992px) {
+  .masthead-content-container {
+    height: 100%;
+    flex-direction: column;
+  }
+  .masthead-content-container .logo-container {
+    align-self: flex-start;
+    margin-top: 3rem;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .masthead-content-container .text-white h1 {
+    padding-top: 2rem;
+  }
+  .masthead-content-container .text-white p {
+    padding-top: 1rem;
+  }
+}
+
+/* Turns contact email white */
+.masthead-content-container a {
+  color: white;
 }
